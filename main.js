@@ -8,7 +8,7 @@ const restaurant = {
     mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
     order: function(starterIndex, mainIndex){
-        return [this.starterMenu[starterIndex], this.mainMenu[this.mainMenu]];
+        return [this.starterMenu[starterIndex], this.mainMenu[this.mainIndex]];
     },
 };
 const arr = [2,3,4];
@@ -35,7 +35,12 @@ console.log(main, secondary);
 const[starter, mainCourse] = restaurant.order(2,0);
 console.log(starter, mainCourse);
 
+// cấu trúc hủy lồng nhau
 const nested = [2, 4, [5, 6]];
 // const [i, j] = nested;
 const [i, ,[j, k]] = nested;
 console.log(i, j, k);
+
+// giá trị mặc định
+const [q=1, u=1, y=1] = [8,9];
+console.log(q,u,y);
