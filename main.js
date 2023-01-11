@@ -6,6 +6,10 @@ const restaurant = {
     categories: ['Italin','Pizzeria', 'Vegetarian', 'Organic'],
     starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
     mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+    order: function(starterIndex, mainIndex){
+        return [this.starterMenu[starterIndex], this.mainMenu[this.mainMenu]];
+    },
 };
 const arr = [2,3,4];
 const a = arr[0];
@@ -26,3 +30,12 @@ console.log(main, secondary);
 
 [secondary, main] = [main, secondary];
 console.log(main, secondary);
+
+// cách nhận 2 giá trị trả về từ 1 hàm
+const[starter, mainCourse] = restaurant.order(2,0);
+console.log(starter, mainCourse);
+
+const nested = [2, 4, [5, 6]];
+// const [i, j] = nested;
+const [i, ,[j, k]] = nested;
+console.log(i, j, k);
